@@ -94,7 +94,7 @@ def show_result_dialog(ans1, ans2, ans3, ans4, ans5, ans6, ans7, ans8, ans9, ans
     else:
         st.error(f"❌ ข้อ 5: ยังไม่ถูกต้อง (คุณตอบ '{u_ans5}')")
 
-    if u_ans6 == "ความรักทำาให้คนตาบอด":
+    if u_ans6 == "ความรักทำให้คนตาบอด":
         st.success("✅ ข้อ 6: ถูกต้อง")
         score += 1
     else:
