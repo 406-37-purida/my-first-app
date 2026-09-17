@@ -47,7 +47,8 @@ def reset_game():
 # 📌 ฟังก์ชัน MessageBox (Dialog)
 # ----------------------------------------------------
 @st.dialog("📊 สรุปผลการเล่นเกม")
-def show_result_dialog(ans1, ans2, ans3, ans4):
+def show_result_dialog(ans1, ans2, ans3, ans4, ans5, ans6, ans7, ans8, ans9, ans10)
+:
     st.balloons()
     score = 0
 
@@ -162,42 +163,45 @@ ans3 = st.text_input(
     value=st.session_state.ans3_val,
 )
 ans4 = st.text_input(
-    "ข้อ 4: The `b a l _ o o n` is in the sky. 🎈",
+    "ข้อ 4: You are my soda pop ,my little soda pop",
     value=st.session_state.ans4_val,
 )
-ans1 = st.text_input(
-    "ข้อ 1: An `a _ _ l e` a day keeps the doctor away. 🍎",
-    value=st.session_state.ans1_val,
+ans5 = st.text_input(
+    "ข้อ 5: So you can keep me Inside the pocket of your ripped jeans",
+    value=st.session_state.ans5_val,
 )
-ans2 = st.text_input(
-    "ข้อ 2: Cats love to eat `f _ s h`. 🐟",
-    value=st.session_state.ans2_val,
+ans6 = st.text_input(
+    "ข้อ 6: เมื่อรู้ว่าไม่มีทางแต่ฉันก็ไม่ตัดใจ",
+    value=st.session_state.ans6_val,
 )
-ans3 = st.text_input(
-    "ข้อ 3: In the sea have many `c _ c o n u t`. 🥥",
-    value=st.session_state.ans3_val,
+ans7 = st.text_input(
+    "ข้อ 7: ขอเพียงแค่ฮึด เข้าไว้ ฮึดเข้าไป",
+    value=st.session_state.ans7_val,
 )
-ans4 = st.text_input(
-    "ข้อ 4: The `b a l _ o o n` is in the sky. 🎈",
-    value=st.session_state.ans4_val,
+ans8 = st.text_input(
+    "ข้อ 8: แย่จัง ทำไมมันคล้ายโดนเธอทำร้ายตรงใจ",
+    value=st.session_state.ans8_val,
 )
-ans1 = st.text_input(
-    "ข้อ 1: An `a _ _ l e` a day keeps the doctor away. 🍎",
-    value=st.session_state.ans1_val,
+ans9 = st.text_input(
+    "ข้อ 9: พิษของคำคน ร้ายแรงแค่ไหน",
+    value=st.session_state.ans9_val,
 )
-ans2 = st.text_input(
-    "ข้อ 2: Cats love to eat `f _ s h`. 🐟",
-    value=st.session_state.ans2_val,
+ans10 = st.text_input(
+    "ข้อ 10: ผมอะเป็นคนแรกแต่ทำไมเธอให้เป็นที่สอง",
+    value=st.session_state.ans10_val,
 )
 
 # อัปเดตค่าล่าสุดเข้าตัวแปร
 st.session_state.ans1_val = ans1
 st.session_state.ans2_val = ans2
-
-# ✏️ [พื้นที่สำหรับนักเรียน]: เพิ่มข้อ 3, 4 ตรงนี้
 st.session_state.ans3_val = ans3
 st.session_state.ans4_val = ans4
-
+st.session_state.ans5_val = ans5
+st.session_state.ans6_val = ans6
+st.session_state.ans7_val = ans7
+st.session_state.ans8_val = ans8
+st.session_state.ans9_val = ans9
+st.session_state.ans10_val = ans10
 # 4. ปุ่มส่งคำตอบ
 if "start" in st.session_state and not st.session_state.get("is_ended", False):
     if st.button("📥 ส่งคำตอบ"):
@@ -209,4 +213,4 @@ if "start" in st.session_state and not st.session_state.get("is_ended", False):
 
 # 5. แสดง Dialog ผลลัพธ์
 if st.session_state.get("is_ended", False):
-    show_result_dialog(ans1, ans2, ans3, ans4)
+    show_result_dialog(ans1, ans2, ans3, ans4, ans5, ans6, ans7, ans8, ans9, ans10)
