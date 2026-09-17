@@ -34,11 +34,11 @@ def reset_game():
     st.session_state.ans3_val = ""
     st.session_state.ans4_val = ""
     st.session_state.ans5_val = ""
-    st.session_state.ans2_val = ""
-    st.session_state.ans3_val = ""
-    st.session_state.ans4_val = ""
-    st.session_state.ans1_val = ""
-    st.session_state.ans2_val = ""
+    st.session_state.ans6_val = ""
+    st.session_state.ans7_val = ""
+    st.session_state.ans8_val = ""
+    st.session_state.ans9_val = ""
+    st.session_state.ans10_val = ""
     st.session_state.start = time.time()  # เริ่มเวลาใหม่
     st.session_state.is_ended = False  # ปิด Dialog
 
@@ -55,6 +55,12 @@ def show_result_dialog(ans1, ans2, ans3, ans4):
     u_ans2 = ans2.strip().lower()
     u_ans3 = ans3.strip().lower()
     u_ans4 = ans4.strip().lower()
+    u_ans5 = ans5.strip().lower()
+    u_ans6 = ans6.strip().lower()
+    u_ans7 = ans7.strip().lower()
+    u_ans8 = ans8.strip().lower()
+    u_ans9 = ans9.strip().lower()
+    u_ans10 = ans10.strip().lower()
 
     # ตรวจข้อ 1
     if u_ans1 == "apple":
