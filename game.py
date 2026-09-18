@@ -28,7 +28,6 @@ if "ans10_val" not in st.session_state:
 st.divider()
 
     # เงื่อนไขแสดงข้อความตามคะแนน 
-    score = 0
     if 0 <= score <= 4:
         st.write("แย่จัง")
     elif 5 <= score <= 9:
