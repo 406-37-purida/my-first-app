@@ -62,6 +62,17 @@ def show_result_dialog(ans1, ans2, ans3, ans4, ans5, ans6, ans7, ans8, ans9, ans
     u_ans9 = ans9.strip().lower()
     u_ans10 = ans10.strip().lower()
 
+     st.divider()
+
+    # เงื่อนไขแสดงข้อความตามคะแนน 
+    score = 0
+    if 0 <= score <= 4:
+        st.write("แย่จัง")
+    elif 5 <= score <= 9:
+        st.write("อาจจะยังน้า")
+    elif score == 10:
+        st.write("เอาเรื่องกระเบื้องร้าว")
+
     # ตรวจข้อ 1
     if u_ans1 == "sunflower":
         st.success("✅ ข้อ 1: ถูกต้อง")
@@ -147,17 +158,6 @@ if "start" in st.session_state and not st.session_state.get("is_ended", False):
         st.rerun()
 
 st.divider()
-
- # เงื่อนไขการให้คะแนน
-score = 0
-if 0 <= score <= 4:
-    st.write("แย่จัง")
-
-if 5 <= score <= 9:
-    st.write("อาจจะยังน้า")
-
-if score == 10:
-    st.write("เอาเรื่องกระเบื้องร้าว")
 
 
 # 3. ช่องรับคำตอบ (ใช้ value ผูกกับตัวแปรตรงๆ เพื่อสั่งเคลียร์ได้)
