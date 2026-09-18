@@ -156,7 +156,7 @@ if 0 <= score <= 4:
 if 5 <= score <= 9:
     print("อาจจะยังน้า")
 
-if score = 10:
+if score == 10:
     print("เอาเรื่องกระเบื้องร้าว")
 
 
