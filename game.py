@@ -128,19 +128,14 @@ def show_result_dialog(ans1, ans2, ans3, ans4, ans5, ans6, ans7, ans8, ans9, ans
 
     st.info(f"🏆 ได้คะแนนรวม: {score} คะแนน")
 
-    if score == 10:
-        st.success("🎉 You win!")
-    else:
-        st.error("💀 You lose!")
 
-    st.divider()
 # เงื่อนไขแสดงข้อความตามคะแนน 
     if 0 <= score <= 4:
-        st.write("แย่จัง")
+        st.error("แย่จัง🫠😜")
     elif 5 <= score <= 9:
-        st.write("อาจจะยังน้า")
+        st.info("อาจจะยังน้า🤭")
     elif score == 10:
-        st.write("เอาเรื่องกระเบื้องร้าว")
+        st.success("เอาเรื่องกระเบื้องร้าว🤯🤯")
 
 # ----------------------------------------------------
 # 1. ปุ่มเริ่มเล่นเกม
