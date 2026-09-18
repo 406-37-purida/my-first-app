@@ -149,6 +149,7 @@ if "start" in st.session_state and not st.session_state.get("is_ended", False):
 st.divider()
 
  # เงื่อนไขการให้คะแนน
+score = 0
 if 0 <= score <= 4:
     st.write("แย่จัง")
 
