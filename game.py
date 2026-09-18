@@ -25,16 +25,6 @@ if "ans9_val" not in st.session_state:
 if "ans10_val" not in st.session_state:
     st.session_state.ans10_val = ""
 
-st.divider()
-
-    # เงื่อนไขแสดงข้อความตามคะแนน 
-    if 0 <= score <= 4:
-        st.write("แย่จัง")
-    elif 5 <= score <= 9:
-        st.write("อาจจะยังน้า")
-    elif score == 10:
-        st.write("เอาเรื่องกระเบื้องร้าว")
-
 
 
 # 📌 ฟังก์ชันเคลียร์ค่าเมื่อกดปุ่มเริ่มใหม่
@@ -72,7 +62,8 @@ def show_result_dialog(ans1, ans2, ans3, ans4, ans5, ans6, ans7, ans8, ans9, ans
     u_ans9 = ans9.strip().lower()
     u_ans10 = ans10.strip().lower()
 
-    
+    st.divider()
+
 
     # ตรวจข้อ 1
     if u_ans1 == "sunflower":
@@ -142,6 +133,14 @@ def show_result_dialog(ans1, ans2, ans3, ans4, ans5, ans6, ans7, ans8, ans9, ans
     else:
         st.error("💀 You lose!")
 
+    st.divider()
+# เงื่อนไขแสดงข้อความตามคะแนน 
+    if 0 <= score <= 4:
+        st.write("แย่จัง")
+    elif 5 <= score <= 9:
+        st.write("อาจจะยังน้า")
+    elif score == 10:
+        st.write("เอาเรื่องกระเบื้องร้าว")
 
 # ----------------------------------------------------
 # 1. ปุ่มเริ่มเล่นเกม
