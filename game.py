@@ -149,16 +149,14 @@ if "start" in st.session_state and not st.session_state.get("is_ended", False):
 st.divider()
 
  # เงื่อนไขการให้คะแนน
-
 if 0 <= score <= 4:
-    print("แย่จัง")
+    st.write("แย่จัง")
 
 if 5 <= score <= 9:
-    print("อาจจะยังน้า")
+    st.write("อาจจะยังน้า")
 
 if score == 10:
-    print("เอาเรื่องกระเบื้องร้าว")
-
+    st.write("เอาเรื่องกระเบื้องร้าว")
 
 
 # 3. ช่องรับคำตอบ (ใช้ value ผูกกับตัวแปรตรงๆ เพื่อสั่งเคลียร์ได้)
